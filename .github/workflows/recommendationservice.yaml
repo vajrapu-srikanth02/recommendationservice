@@ -26,10 +26,11 @@ jobs:
     needs: checkout
     steps:
       - name: setup python
-        uses: actions/setup-python@v5
+        #uses: actions/setup-python@v5
+        uses: Qwerty-133/python-setup@v1
         with:
-          python-version: '3.11.4'
-          cache: 'pip' # caching pip dependencies
+          python-version: '3.11'
+          #cache: 'pip' # caching pip dependencies
 
       - name: Install dependencies
         run: |
