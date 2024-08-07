@@ -1,3 +1,4 @@
+# https://github.com/actions/setup-python/issues/519
 name: python lang
 
 env:
@@ -35,10 +36,11 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-      
-      - name: build or package your application
+
+      - name: run tests
         run: |
-          python setup.py sdist bdist_wheel
+          pip install pytest
+          pytest
 
   trivy-fs-scan:
     runs-on: self-hosted
