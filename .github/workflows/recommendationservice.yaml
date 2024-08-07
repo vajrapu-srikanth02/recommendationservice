@@ -36,9 +36,9 @@ jobs:
         run: |
           pip install -r requirements.txt
       
-      - name: Generate gRPC Code
-        run: |
-          bash genproto.sh
+      # - name: Generate gRPC Code
+      #   run: |
+      #     bash genproto.sh
       
       - name: run tests
         run: |
