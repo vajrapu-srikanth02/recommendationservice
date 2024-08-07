@@ -99,7 +99,7 @@ if __name__ == "__main__":
         raise KeyError()
       else:
         logger.info("Profiler enabled.")
-        initStackdriverProfiling()
+        #initStackdriverProfiling()
     except KeyError:
         logger.info("Profiler disabled.")
 
