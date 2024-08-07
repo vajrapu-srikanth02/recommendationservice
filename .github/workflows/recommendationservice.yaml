@@ -21,16 +21,15 @@ jobs:
         uses: actions/checkout@v4
 
   setup-python:
-    name: Setup Python and Install Dependencies
+    name: Python
     runs-on: self-hosted
     needs: checkout
     steps:
       - name: setup python
-        #uses: actions/setup-python@v5
-        uses: Qwerty-133/python-setup@v1
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          #cache: 'pip' # caching pip dependencies
+          cache: 'pip' # caching pip dependencies
 
       - name: Install dependencies
         run: |
