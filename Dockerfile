@@ -21,6 +21,10 @@ COPY --from=builder /usr/local/lib/python3.10/ /usr/local/lib/python3.10/
 # Add the application
 COPY *.py /app/
 
+ENV PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550
+
+ENV PORT "8080"
+
 EXPOSE 8080
 
 ENTRYPOINT [ "python", "recommendation_server.py" ]
